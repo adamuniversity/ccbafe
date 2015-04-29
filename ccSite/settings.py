@@ -60,6 +60,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'home',
     'sitetree',
+    'django_summernote',
 )
 
 SITE_ID = 1
