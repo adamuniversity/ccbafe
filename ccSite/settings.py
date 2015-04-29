@@ -24,8 +24,24 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
+    TEMPLATE_PATH,
+)
+
+TEMPLATE_LOADERS = {
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+}
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.template.context_processors.request',
+    'django.core.context_processors.static',
+    'django.contrib.messages.context_processors.messages',
 )
 
 ALLOWED_HOSTS = []
@@ -43,6 +59,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.flatpages',
     'home',
+    'sitetree',
 )
 
 SITE_ID = 1
@@ -75,6 +92,11 @@ DATABASES = {
     }
 }
 
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+)
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -92,22 +114,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-# STATIC_ROOT = (BASE_DIR)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files', 'media')
+MEDIA_URL = '/media/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'files', 'static')
 STATIC_URL = '/static/'
-
-# STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    'D:\django_project_folder\bafeProjects\ccSite>',
-                 )
+    os.path.join(BASE_DIR, 'static'),
+)
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
+ADMIN_MEDIA_PREFIX = '/admin-static/'
+
+# Django 1.8 Logging
 LOGGING = {
     'version' : 1,
     'disable_existing_loggers' : False,

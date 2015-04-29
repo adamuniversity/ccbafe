@@ -1,0 +1,14 @@
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    {% load static %}
+    <a href="#" class="navbar-brand"><img src="{{ STATIC_URL }}assets/images/cc-bafe.jpg" width="220" height="160"></a>
+</div>
+<div class="collapse navbar-collapse">
+   {% load sitetree %}
+       {% sitetree_menu from "main_menu" include "trunk, topmenu" template "sitetree/treemenu/mainMenu.html" %}
+</div>
