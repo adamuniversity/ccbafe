@@ -60,7 +60,6 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'home',
     'sitetree',
-    'django_summernote',
 )
 
 SITE_ID = 1
@@ -73,6 +72,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'ccSite.urls'
