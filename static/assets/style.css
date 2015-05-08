@@ -10,50 +10,53 @@ body {
     display: inline-block !important;
 }
 
+.dropdown-menu>li>a {
+    margin-top: 10px;
+}
+
+.container-fluid.content-container {
+    padding-bottom: 15px;
+}
+
+.right-col {
+    background-color: #fdfdfe;
+}
+
+.left-col {
+    background-color: #ffffff;
+}
+
     /* FOOTER */
-    .footer-spacer {
-        display: none;
-    }
+   .column .legal {
+       max-width: 212px;
+   }
 
-    #footer-wrap {
-        position: relative;
-    }
+   footer.bg-gray {
+       background-color: #f6f7f7;
+   }
 
-    #copyright {
-        padding: 20px;
-    }
+   .vertical-align {
+       position: relative;
+       top: 50%;
+   }
 
-    #copyright p {
-        float: none;
-        text-align: center;
-    }
+   .btn-link {
+       font-size: 18px!important;
+   }
 
-    #copyright .text-left {
-        width: 100%;
-        float: none;
-        margin-bottom: 20px;
-        max-width: 100%;
-        text-align: center;
-    }
+   .text-gray {
+       color: #030202 !important;
+   }
 
-    #copyright .text-right {
-        width: 100%;
-        float: none;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    #copyright nav .menu {
-        float: none;
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    #copyright nav .menu li {
-        float: none;
-    }
-
+   .footer-links{
+       position: fixed;
+       bottom: 50px;
+       width: 100%;
+       left: 0;
+       padding-left: 30px;
+       padding-right: 30px;
+       border-top: 1px solid #000;
+   }
 
     /* PDF VIEW */
 
@@ -84,3 +87,9 @@ body {
         color: #ffffff;
         font-weight: bold;
     }
+
+   .sidebar-nav-fixed {
+	    width:10%;
+    }
+
+   /* WIDGET AREA */
