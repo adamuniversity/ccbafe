@@ -1,3 +1,36 @@
 # gitignore exp
-.idea
+
+# Compiled source #
+###################
 *.pyc
+*.pyo
+*.swp
+
+# Database source #
+###################
+*.sql
+*.sql.zip
+*.sql.gzip
+
+# Packages #
+############
+
+# Installer Logs#
+#################
+logs/*
+pids/*
+
+# Other #
+#########
+__pycache__/*
+__pycache__
+.installed.cfg
+bin
+develop-eggs
+dist
+eggs
+src/*.egg-info
+settings.py
+.git/*
+.idea
+.idea/*
