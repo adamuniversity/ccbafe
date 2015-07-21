@@ -30,7 +30,7 @@ develop-eggs
 dist
 eggs
 src/*.egg-info
-settings.py
+ccSite/settings.py
 .git/*
 .idea
 .idea/*
