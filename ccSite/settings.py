@@ -60,6 +60,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'home',
     'sitetree',
+    'tinymce',
 )
 
 SITE_ID = 1

@@ -7,7 +7,7 @@
 * Here is how you use it
 */
 $(function(){    
-    $('.view-pdf').on('click',function(){
+    $(".view-pdf").bind("click",function(e){
         var pdf_link = $(this).attr('href');
         var iframe = '<div class="iframe-container"><iframe src="'+pdf_link+'"></iframe></div>'
         $.createModal({

@@ -92,4 +92,32 @@ body {
 	    width:10%;
     }
 
+   #footer {
+      background: #333;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      color: #666;
+    }
+
+   .jumbotron {
+       background-color: #FFF;
+   }
+
+    #stickyheader {
+        height: 100px;
+        width: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: fixed;
+        margin: 0 auto;
+        z-index: 300;
+        top: 0;
+        padding-left: 14px;
+        padding-top: 14px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
    /* WIDGET AREA */

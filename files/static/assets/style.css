@@ -1,0 +1,105 @@
+@import "css/bootstrap-theme.min.css";
+@import "css/bootstrap.min.css";
+@import "css/font-awesome.min.css";
+
+body {
+    background-color: #fff;
+}
+
+.mobile-nav-toggle-label {
+    display: inline-block !important;
+}
+
+.dropdown-menu>li>a {
+    margin-top: 10px;
+}
+
+.container-fluid.content-container {
+    padding-bottom: 15px;
+}
+
+.right-col {
+    background-color: #fdfdfe;
+}
+
+.left-col {
+    background-color: #ffffff;
+}
+
+    /* FOOTER */
+   .column .legal {
+       max-width: 212px;
+   }
+
+   footer.bg-gray {
+       background-color: #f6f7f7;
+   }
+
+   .vertical-align {
+       position: relative;
+       top: 50%;
+   }
+
+   .btn-link {
+       font-size: 18px!important;
+   }
+
+   .text-gray {
+       color: #030202 !important;
+   }
+
+   .footer-links{
+       position: fixed;
+       bottom: 50px;
+       width: 100%;
+       left: 0;
+       padding-left: 30px;
+       padding-right: 30px;
+       border-top: 1px solid #000;
+   }
+
+    /* PDF VIEW */
+
+    .iframe-container{
+        padding-bottom: 60%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .iframe-container iframe,
+    .iframe-container object,
+    .iframe-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* HEADER COLOR */
+
+    .navbar-inverse {
+        background-image: linear-gradient(to bottom, #1c42b6 0, #1d15c9 100%);
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+   .sidebar-nav-fixed {
+	    width:10%;
+    }
+
+   #footer {
+      background: #333;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      color: #666;
+    }
+
+   .jumbotron {
+       background-color: #fff;
+   }
+   /* WIDGET AREA */

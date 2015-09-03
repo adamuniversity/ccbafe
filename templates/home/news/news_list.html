@@ -1,0 +1,41 @@
+{% extends "home/index.html" %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    {% include "extensions/index_header.html" %}
+</head>
+
+{% autoescape off %}
+<body>
+
+    {% block content %}
+
+        {% for news_list in object_list %}
+
+            <div class="blog-item-body">
+                <h2 class="entry-title">
+                    <a href="{{ news_list.get_absolute_url }}">{{ news_list.news_title }}</a>
+                </h2>
+                <ul class="list-inline blog-post-list">
+                    <li><a href="#" class="hover-color"><i class="fa fa-calendar"></i> {{news_list.news_date | date:'d M Y H:i' }}</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="hover-color"><i class="fa fa-user"></i> {{ news_list.news_author.get_full_name }}</a></li>
+                    <li>|</li>
+                </ul>
+                <p>
+                    {{ news_list.news_content|truncatewords:50 | safe }}
+                </p>
+                <div class="readMoreBlog">
+                    <a class="button default small" href="{{ news_list.get_absolute_url }}">Read more</a>
+                </div>
+            </div>
+            <hr>
+        {% empty %}
+           <p>Нет постов</p>
+        {% endfor %}
+
+    {% endblock %}
+</body>
+{% endautoescape %}
+</html>

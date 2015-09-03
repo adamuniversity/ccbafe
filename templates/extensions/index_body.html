@@ -1,0 +1,13 @@
+{% block news_index  %}
+    <div class="col-sm-4">
+        <a href="/news/allnews">Новости</a>
+        {% include "home/news/news_index.html" %}
+    </div>
+{% endblock %}
+
+{% block vacancy %}
+    <div class="col-sm-4">
+        <a href="/vacancies/">Vacancy</a>
+        {% include "home/vacancy/vacancy_index.html" %}
+    </div>
+{% endblock %}

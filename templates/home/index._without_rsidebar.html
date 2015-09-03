@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {% include "extensions/index_header.html" %}
+</head>
+<body>
+
+<!-- ================= OPEN Navbar =====================-->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        {% include "extensions/index_main_menu.html" %}
+    </nav>
+<!-- =================== CLOSE Navbar ==================== -->
+
+<!-- ===================For sliders and logo==========-->
+<div class="container-fluid">
+    <div class="col-sm-4">
+        <a href="{{ request.META.HTTP_HOST }}">
+            <img src="{{ STATIC_URL }}assets/images/Career123123 Center.png" width="260" height="120">
+        </a>
+    </div>
+    <div class="col-sm-4">
+        <img src="{{ STATIC_URL }}assets/images/Tempus_logo-1.png" width="290" height="100">
+    </div>
+    <div class="col-sm-4">
+        <img src="{{ STATIC_URL }}assets/images/uniowork_logo_110.png" width="160" height="100">
+    </div>
+</div>
+<!-- =================================================-->
+
+<!-- ================== OPEN Content =================== -->
+<div class="container-fluid content-container">
+
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 left-col">
+        {% include "extensions/index_sidebar_menu.html" %}
+    </div>
+
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        {% block content %}
+            No content
+        {% endblock %}
+    </div>
+
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 right-col">
+
+    </div>
+
+</div>
+
+
+<!-- ============== OPEN Content =================== -->
+
+<!-- ================== OPEN Footer ================== -->
+<div class="container-fluid">
+    {% include "extensions/index_footer.html" %}
+</div>
+<!-- ================== CLOSE FOOTER =================== -->
+
+</body>
+</html>

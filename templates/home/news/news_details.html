@@ -1,0 +1,23 @@
+{% extends 'home/index.html' %}
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>news.news_title</title>
+</head>
+<body>
+
+    {% block content %}
+            <h2>{{ news.news_title }}</h2>
+            <img src="{{ MEDIA_URL }}{{news.news_image }}">
+                 <ul class="list-inline blog-post-list">
+                    <li><a href="#" class="hover-color"><i class="fa fa-calendar"></i> {{ news.news_date | date:'d M Y H:i' }}</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="hover-color"><i class="fa fa-user"></i> {{ news.news_author.get_full_name }}</a></li>
+                    <li></li>
+                 </ul>
+                <p>{{ news.news_content | safe}}</p>
+                <div>{{ news.flickr_album | safe }}</div>
+            <hr>
+{% endblock %}
+</body>
+</html>
