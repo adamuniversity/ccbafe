@@ -1,4 +1,4 @@
-Django==1.8
+Django==1.11.29
 django-ckeditor==4.4.7
 django-sitetree==1.4.0
 django-tinymce==1.5.3
